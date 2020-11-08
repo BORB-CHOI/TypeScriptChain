@@ -1,0 +1,14 @@
+{
+  "name": "TypeScriptChain",
+  "version": "1.0.0",
+  "description": "Learning Typescript by making a Blockchain with it",
+  "main": "index.js",
+  "repository": "https://github.com/BORB-CHOI/TypeScriptChain.git",
+  "author": "qzsec299@naver.com",
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "prestart": "tsc",
+    "start": "node index.js"
+  }
+}
