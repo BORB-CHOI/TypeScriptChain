@@ -1,32 +1,30 @@
-class Human {
-  public name: string;
-  private age: number;
-  public gender: string;
-  constructor(name: string, age: number, gender?: string) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+class Block {
+  public index: number;
+  public hash: string;
+  public previousHash: string;
+  public data: string;
+  public timestamp: number;
+  constructor(
+    index: number,
+    hash: string,
+    previousHash: string,
+    data: string,
+    timestamp: number
+  ) {
+    this.index = index;
+    this.hash = hash;
+    this.previousHash = previousHash;
+    this.data = data;
+    this.timestamp = timestamp;
   }
 }
 
-const borb = new Human("BORB", 20, "male");
+const genesisBlock: Block = new Block(0, "11010010001", "", "Hello", 12345);
 
-// interface Human {
-//   age: number;
-//   name: string;
-//   gender: string;
-// }
+let blockchain: [Block] = [genesisBlock];
 
-// const person = {
-//   name: "bore",
-//   gender: "male",
-//   age: 19,
-// };
+// \/ Don't working. \/
+// blockchain.push("lalalalala");
 
-const sayHi = (InGan: Human): string => {
-  return `Hello ${InGan.name}, you are ${InGan.age}, you are a ${InGan.gender}!`;
-};
-
-console.log(sayHi(borb));
-
+console.log(blockchain);
 export = {};
